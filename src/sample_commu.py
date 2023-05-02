@@ -23,8 +23,8 @@ if __name__ == '__main__':
     HOST = args.host
     PORT = args.port
 
+    text = 'おはようございます。ぼくはコミューです。どうぞよろしくお願いします。'
     # Say command
-    text = 'おはようございます。ぼくはソータです。どうぞよろしくお願いします。'
     t = cl.say_text(HOST, PORT, text)
     print(text, 'time:', t)
     time.sleep(t / 1000 + 3)
@@ -39,7 +39,7 @@ if __name__ == '__main__':
     time.sleep(t / 1000 + 3)
 
     #Motionパートでエラーあり（おそらくrobot typeと相関あり）
-    '''
+    #'''
     # Pose command (Servo)
     text = '2秒間で、45度回転し、左手を90度あげます。'
     t = cl.say_text(HOST, PORT, text)
@@ -93,7 +93,7 @@ if __name__ == '__main__':
     print(text, 'time:', t)
     cl.stop_idle_motion(HOST, PORT)
     time.sleep(t / 1000 + 3)
-    '''
+    #'''
 
     # Say with motion
     text = '''\

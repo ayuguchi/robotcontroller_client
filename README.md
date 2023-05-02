@@ -7,15 +7,19 @@ Sample programs for communicating with Sota (CommU).
 git clone https://github.com/social-robotics-lab/robotcontroller_client.git
 cd robotcontroller_client
 mkdir src/wav
+```
+
+# Run with Docker
+```
 docker build -t robotcontroller_client .
-```
-
-# Run
-```
 docker run -it --name robotcontroller_client --mount type=bind,source="$(pwd)"/src,target=/tmp --rm robotcontroller_client /bin/bash
-python3 sample.py --host 192.168.x.x 
+python3 sample.py --host Robot IP
 ```
 
+# Run without Docker
+```
+python samply.py --host Robot IP
+```
 
 # データ送信・コマンド送信
 
