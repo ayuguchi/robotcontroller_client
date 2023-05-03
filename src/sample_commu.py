@@ -38,8 +38,6 @@ if __name__ == '__main__':
     print('Sample.wav', 'time:', t)
     time.sleep(t / 1000 + 3)
 
-    #Motionパートでエラーあり（おそらくrobot typeと相関あり）
-    #'''
     # Pose command (Servo)
     text = '2秒間で、45度回転し、左手を90度あげます。'
     t = cl.say_text(HOST, PORT, text)
@@ -48,13 +46,21 @@ if __name__ == '__main__':
     cl.play_pose(HOST, PORT, pose)
     time.sleep(t / 1000 + 3)
 
+    # Pose command (Eye)
+    text = '目も動かせます。'
+    t = cl.say_text(HOST, PORT, text)
+    print(text, 'time:', t)
+    pose = {'Msec': 1000, 'ServoMap': {'L_EYE_Y': -20, 'R_EYE_Y': -10, 'EYES_P': 15}}
+    cl.play_pose(HOST, PORT, pose)
+    time.sleep(t / 1000 + 3)
+
     # Pose command (LED)
-    #text = '目の色も変えられます。'
-    #t = cl.say_text(HOST, PORT, text)
-    #print(text, 'time:', t)
-    #pose = {'Msec': 500, 'LedMap': {'L_EYE_R': 0, 'L_EYE_G': 0, 'L_EYE_B': 255, 'R_EYE_R': 0, 'R_EYE_G': 0, 'R_EYE_B': 255}}
-    #cl.play_pose(HOST, PORT, pose)
-    #time.sleep(t / 1000 + 3)
+    text = '頬を赤らめることもできます。'
+    t = cl.say_text(HOST, PORT, text)
+    print(text, 'time:', t)
+    pose = {'Msec': 500, 'LedMap': {'L_CHEEK': 255}}
+    cl.play_pose(HOST, PORT, pose)
+    time.sleep(t / 1000 + 3)
 
     # Read command
     text = '今の関節角度をコンソールに表示しています。'
@@ -93,7 +99,6 @@ if __name__ == '__main__':
     print(text, 'time:', t)
     cl.stop_idle_motion(HOST, PORT)
     time.sleep(t / 1000 + 3)
-    #'''
 
     # Say with motion
     text = '''\

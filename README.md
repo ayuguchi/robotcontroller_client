@@ -1,6 +1,5 @@
 # robotcontroller_client
-Sample programs for communicating with Sota (CommU).
-
+Sample programs for communicating with CommU.
 
 # Install
 ```
@@ -9,16 +8,27 @@ cd robotcontroller_client
 mkdir src/wav
 ```
 
+# Install on a local environment
+```
+sudo apt-get -y install ffmpeg hts-voice-nitech-jp-atr503-m001 open-jtalk open-jtalk-mecab-naist-jdic python3-pip
+mkdir lib
+cd lib
+wget --no-check-certificate http://sourceforge.net/projects/mmdagent/files/MMDAgent_Example/MMDAgent_Example-1.8/MMDAgent_Example-1.8.zip 
+unzip MMDAgent_Example-1.8.zip
+sudo cp -r MMDAgent_Example-1.8/Voice/mei/ /usr/share/hts-voice/
+pip install pydub
+```
+
 # Run with Docker
 ```
 docker build -t robotcontroller_client .
 docker run -it --name robotcontroller_client --mount type=bind,source="$(pwd)"/src,target=/tmp --rm robotcontroller_client /bin/bash
-python3 sample.py --host Robot IP
+python3 sample_commu.py --host Robot IP
 ```
 
 # Run without Docker
 ```
-python samply.py --host Robot IP
+python samply_commu.py --host Robot IP
 ```
 
 # データ送信・コマンド送信

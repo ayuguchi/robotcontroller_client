@@ -1,3 +1,5 @@
+# -*- encoding: UTF-8 -*-
+#!/usr/bin/env python3
 import json
 import jtalk
 import random
@@ -5,9 +7,8 @@ import serverio as io
 from pydub import AudioSegment
 from typing import List
 
-HOME_ALL_SERVO_MAP = dict(HEAD_R=0, HEAD_P=-5, HEAD_Y=0, BODY_Y=0, L_SHOU_P=-90, L_SHOU_R=0, R_SHOU_P=90, R_SHOU_R=0)
+HOME_ALL_SERVO_MAP = dict(HEAD_R=0, HEAD_P=-5, HEAD_Y=0, BODY_Y=0, L_SHOU_P=-90, L_SHOU_R=0, R_SHOU_P=90, R_SHOU_R=0, L_EYE_Y=0, R_EYE_Y=0, EYES_P=0)
 HOME_ARM_SERVO_MAP = dict(L_SHOU_P=-90, L_SHOU_R=0, R_SHOU_P=90, R_SHOU_R=0)
-#HOME_LED_MAP = dict(L_EYE_R=255, L_EYE_G=255, L_EYE_B=255, R_EYE_R=255, R_EYE_G=255, R_EYE_B=255)
 SPEECH_SERVO_MAPS = [
             dict(R_SHOU_P=59, R_SHOU_R=23, L_SHOU_R=-21, L_SHOU_P=-63),
             dict(R_SHOU_P=32, R_SHOU_R=84, L_SHOU_R=-80, L_SHOU_P=-16),
