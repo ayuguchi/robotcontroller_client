@@ -1,5 +1,6 @@
+# -*- encoding: UTF-8 -*-
+#!/usr/bin/env python3
 import socket
-
 
 def recv(ip:str, port:int, cmd:str) -> str:
     conn = __connect(ip, port)
