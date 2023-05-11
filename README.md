@@ -3,7 +3,7 @@ Sample programs for communicating with CommU.
 
 # Install
 ```
-git clone https://github.com/social-robotics-lab/robotcontroller_client.git
+git clone https://github.com/ayuguchi/robotcontroller_client.git
 cd robotcontroller_client
 mkdir src/wav
 ```
@@ -28,7 +28,8 @@ python3 sample_commu.py --host Robot IP
 
 # Run without Docker
 ```
-python samply_commu.py --host Robot IP
+cd src
+python3 samply_commu.py --host Robot IP
 ```
 
 # データ送信・コマンド送信

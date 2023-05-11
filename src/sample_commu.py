@@ -7,8 +7,8 @@ import time
 # MOTION
 # motionとは、poseの系列。poseは、各関節の角度指令値(map)と到達時間(msec)の辞書
 NOD_MOTION = [
-    {"Msec": 250, "ServoMap":{"R_SHOU_P":105,"HEAD_P":-15,"R_SHOU_R":0,"L_SHOU_R":-3,"L_SHOU_P":-102}},
-    {"Msec": 250, "ServoMap":{"R_SHOU_P":77,"HEAD_P":20,"R_SHOU_R":17,"L_SHOU_R":-17,"L_SHOU_P":-79}},
+    {"Msec": 250, "ServoMap":{"R_SHOU_P":105,"HEAD_P":-15,"R_SHOU_R":0,"L_SHOU_R":0,"L_SHOU_P":-102}},
+    {"Msec": 250, "ServoMap":{"R_SHOU_P":77,"HEAD_P":20,"R_SHOU_R":20,"L_SHOU_R":-20,"L_SHOU_P":-79}},
     {"Msec": 250, "ServoMap":{"R_SHOU_P":92,"HEAD_P":-5,"R_SHOU_R":5,"L_SHOU_R":-7,"L_SHOU_P":-88}},
 ]
 

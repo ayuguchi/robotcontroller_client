@@ -7,7 +7,7 @@ import serverio as io
 from pydub import AudioSegment
 from typing import List
 
-HOME_ALL_SERVO_MAP = dict(HEAD_R=0, HEAD_P=-5, HEAD_Y=0, BODY_Y=0, L_SHOU_P=-90, L_SHOU_R=0, R_SHOU_P=90, R_SHOU_R=0, L_EYE_Y=0, R_EYE_Y=0, EYES_P=0)
+HOME_ALL_SERVO_MAP = dict(HEAD_R=0, HEAD_P=-5, HEAD_Y=0, BODY_Y=0, L_SHOU_P=-90, L_SHOU_R=-20, R_SHOU_P=90, R_SHOU_R=20, L_EYE_Y=0, R_EYE_Y=0, EYES_P=0)
 HOME_ARM_SERVO_MAP = dict(L_SHOU_P=-90, L_SHOU_R=0, R_SHOU_P=90, R_SHOU_R=0)
 SPEECH_SERVO_MAPS = [
             dict(R_SHOU_P=59, R_SHOU_R=23, L_SHOU_R=-21, L_SHOU_P=-63),
